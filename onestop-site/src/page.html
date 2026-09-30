@@ -1,0 +1,367 @@
+<title>OneStop</title>
+<meta name="description" content="OneStop is Muhsin Gigani, Pavitra Rajpal and Hatim Sampalwala: a digital strategy crew from Mumbai running ads, SEO, social, content, web and events from one place.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%230C0A09'/%3E%3Cpath d='M3 10H10' stroke='%23FFB81C' stroke-width='3'/%3E%3Cpath d='M3 15H10' stroke='%23EC2F7B' stroke-width='3'/%3E%3Cpath d='M3 20H10' stroke='%234A76FF' stroke-width='3'/%3E%3Ccircle cx='18' cy='15' r='7.5' fill='none' stroke='%23F3ECDF' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<!-- STYLE -->
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><b>VIEW</b></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+	<div class="wrap nav__in">
+		<a class="logo" href="#top" data-go="top" aria-label="OneStop, back to top">
+			<svg class="logo__mark" viewBox="0 0 30 30" aria-hidden="true">
+				<path d="M0 9 H9" stroke="#FFB81C" stroke-width="3.2"/>
+				<path d="M0 15 H9" stroke="#EC2F7B" stroke-width="3.2"/>
+				<path d="M0 21 H9" stroke="#4A76FF" stroke-width="3.2"/>
+				<circle cx="18" cy="15" r="9" fill="none" stroke="#F3ECDF" stroke-width="4.4"/>
+			</svg>
+			ONESTOP
+		</a>
+		<ul class="nav__links">
+			<li><a href="#lines" data-go="lines">Lines</a></li>
+			<li><a href="#services" data-go="services">Services</a></li>
+			<li><a href="#work" data-go="work">Work</a></li>
+			<li><a href="#crew" data-go="crew">Crew</a></li>
+		</ul>
+		<a class="pill pill--solid nav__cta" href="#contact" data-go="contact"><span class="dot"></span><span class="lg">Next stop: you</span><span class="sm">Contact</span></a>
+	</div>
+</header>
+
+<main>
+	<!-- ============================================================ HERO -->
+	<section class="hero" id="top" data-scene="hero" data-label="Board" data-color="#F3ECDF">
+		<div class="wrap hero__meta">
+			<span>Line map · <b>Mumbai</b></span>
+			<span>18.9345°N · 72.8246°E</span>
+			<span class="live">IST <b id="clock">--:--:--</b></span>
+		</div>
+		<div class="wrap">
+			<h1 class="wordmark" aria-label="OneStop">
+				<span class="ch ring-o" style="--i:0"></span><span class="ch" style="--i:1">N</span><span class="ch" style="--i:2">E</span><span class="ch" style="--i:3">S</span><span class="ch" style="--i:4">T</span><span class="ch ring-o" style="--i:5"></span><span class="ch" style="--i:6">P</span>
+			</h1>
+			<div class="hero__row">
+				<p class="hero__tag">three lines. <span class="mg">one stop.</span></p>
+				<p class="hero__lede"><strong>Muhsin, Pavitra and Hatim</strong> are a digital strategy crew from Mumbai. Ads, SEO, social, content, web and events, all run from one platform.</p>
+				<div class="hero__ctas">
+					<a class="pill pill--solid" href="#lines" data-go="lines"><span class="dot"></span>Meet the lines</a>
+					<button class="pill" type="button" data-film data-cursor="PLAY">Play the film · 0:30</button>
+				</div>
+			</div>
+			<nav class="legend" aria-label="The three lines">
+				<a href="#muhsin" data-go="muhsin"><i style="background:var(--marigold)"></i>Line 01 · Muhsin</a>
+				<a href="#pavitra" data-go="pavitra"><i style="background:var(--berry)"></i>Line 02 · Pavitra</a>
+				<a href="#hatim" data-go="hatim"><i style="background:var(--cobalt)"></i>Line 03 · Hatim</a>
+			</nav>
+		</div>
+		<div class="scroll-cue" aria-hidden="true">Scroll to board</div>
+	</section>
+
+	<!-- ============================================================ WHY -->
+	<section class="section why" id="why" data-scene="why" data-label="Why" data-color="#F3ECDF">
+		<div class="wrap">
+			<div class="section-head"><span class="eyebrow">Why one stop</span></div>
+			<p class="manifesto" id="manifesto">Most brands make eight trips to launch one campaign. A strategist, an <span class="tok" style="background:var(--berry)">ads</span> agency, an <span class="tok" style="background:var(--cobalt);color:var(--cream)">SEO</span> freelancer, a <span class="tok" style="background:var(--marigold)">social</span> team, a content studio, a <span class="tok" style="background:var(--cream)">web</span> developer, someone for dashboards and someone for events. Every handover loses a little of the idea. We run all eight from one platform, so the idea arrives in one piece.</p>
+			<dl class="stats">
+				<div class="stat"><dt>professional roles across 8 companies, from JioHotstar to Toy Kingdom</dt><dd data-count="11">11</dd></div>
+				<div class="stat"><dt>leadership posts running college fests Talaash and Digital Nexus<span class="stat__logos"><span class="plate plate--sm"><img src="assets/logos/talaash.png" alt="Talaash logo" loading="lazy"></span><span class="plate plate--sm plate--dark"><img src="assets/logos/nexus.png" alt="Jai Hind Digital Nexus logo" loading="lazy"></span></span></dt><dd data-count="5">5</dd></div>
+				<div class="stat"><dt>certifications: Google Ads Search twice, Google Analytics 4 and Claude 101<span class="stat__logos"><span class="plate plate--sm"><img src="assets/logos/google-ads.svg" alt="Google Ads logo" loading="lazy"></span><span class="plate plate--sm"><img src="assets/logos/google-analytics.svg" alt="Google Analytics logo" loading="lazy"></span><span class="plate plate--sm"><img src="assets/logos/anthropic.svg" alt="Anthropic logo" loading="lazy"></span></span></dt><dd data-count="4">4</dd></div>
+				<div class="stat"><dt>followers grown for Toy Kingdom on Instagram and Facebook</dt><dd data-count="2500" data-suffix="+">2,500+</dd></div>
+			</dl>
+		</div>
+	</section>
+
+	<!-- ============================================================ LINES -->
+	<section class="section lines-intro" id="lines" data-scene="why" data-label="Lines" data-color="#F3ECDF">
+		<div class="wrap section-head">
+			<span class="eyebrow">The lines</span>
+			<h2 class="h2">Three lines, <span class="serif">every stop so far.</span></h2>
+			<p class="sub">Each of us runs a line. Ride one down the page and you pass every company, fest and project on it, ending at the same interchange.</p>
+		</div>
+	</section>
+
+	<!-- Muhsin -->
+	<section class="member" id="muhsin" data-line="m" data-scene="m" data-label="Muhsin" data-color="#FFB81C">
+		<div class="wrap member__grid">
+			<div class="member__id">
+				<div class="member__head">
+					<div class="portrait">
+					<svg viewBox="0 0 100 100" aria-hidden="true"><g class="dial"><circle cx="50" cy="50" r="49" fill="none" stroke="#FFB81C" stroke-width="0.8" stroke-dasharray="1 3.2"/><circle cx="99" cy="50" r="2.6" fill="#FFB81C"/></g></svg>
+					<img src="assets/muhsin.jpg" alt="Portrait of Muhsin Gigani" width="720" height="720" loading="lazy">
+					<span class="now">NOW ARRIVING</span>
+				</div>
+					<div class="member__who">
+						<div class="badge"><b>M</b><span><em>Line 01</em>Towards OneStop →</span></div>
+						<h3 class="member__name"><span class="nm">MUHSIN</span><small>GIGANI</small></h3>
+					</div>
+				</div>
+				<p class="member__role">brand, content &amp; build.</p>
+				<p class="member__bio">Builds brands people actually care about, right where creative meets data. Runs social for e-commerce, leads marketing and execution teams for big college events, and ships web experiences with AI tools every day.</p>
+				<ul class="chips">
+					<li>Canva</li><li>Google Ads</li><li>SEO tools</li><li>Cursor</li><li>Antigravity</li><li>Vercel</li><li>GitHub</li><li>WordPress</li><li>Zapier</li><li>Google Flow</li><li>Gamma</li>
+				</ul>
+				<div class="links">
+					<a class="pill" href="https://muhsin-portfolio-ten.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a>
+					<a class="pill" href="#contact" data-go="contact">Contact</a>
+				</div>
+			</div>
+			<div class="tl">
+				<div class="tl__rail"></div><div class="tl__fill"></div>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2024</span><span class="plate plate--text" role="img" aria-label="Amigo Cars">Amigo Cars</span></div><h4 class="stop__co">Amigo Cars</h4><p class="stop__role">Sales Manager</p><p class="stop__what">Ran end-to-end sales and customer relationships for the dealership, with a client-first approach that fed revenue growth.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2024</span><span class="plate plate--dark"><img src="assets/logos/nexus.png" alt="Jai Hind Digital Nexus logo" loading="lazy"></span></div><h4 class="stop__co">Jai Hind Digital Nexus</h4><p class="stop__role">Head of Department, Marketing</p><p class="stop__what">Led marketing for the college's flagship tech event, handled brand outreach end to end and brought in Rio and Mexibay as sponsors.</p><div class="stop__logos"><span>Sponsors signed</span><span class="plate plate--sm"><img src="assets/logos/rio.svg" alt="Rio logo" loading="lazy"></span><span class="plate plate--text plate--sm" role="img" aria-label="Mexibay">Mexibay</span></div></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2025</span><span class="plate plate--dark"><img src="assets/logos/toykingdom.png" alt="Toy Kingdom logo" loading="lazy"></span></div><h4 class="stop__co">Toy Kingdom Online</h4><p class="stop__role">Social Media Manager</p><p class="stop__what">Content and promotional design for an e-commerce toy store, one consistent identity across every channel, tuned against performance metrics.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2025</span><span class="plate"><img src="assets/logos/talaash.png" alt="Talaash logo" loading="lazy"></span></div><h4 class="stop__co">Talaash Legacy</h4><p class="stop__role">Head of Department, Executions</p><p class="stop__what">Took college-scale events from concept to completion, coordinating media, marketing and technical teams on one workflow.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2026</span><span class="plate"><img src="assets/logos/django.png" alt="Django Digital logo" loading="lazy"></span></div><h4 class="stop__co">Django Digital</h4><p class="stop__role">Solutions Intern</p><p class="stop__what">Joined Django Digital, the Mumbai agency behind content, influencer, performance and branding work for names like Castrol and CaratLane, as a Solutions Intern.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Projects</span><span class="plate"><img src="assets/logos/aura.png" alt="Aura Coffee logo" loading="lazy"></span></div><h4 class="stop__co">Aura Coffee &amp; a full rebrand</h4><p class="stop__role">3D storefront · identity overhaul</p><p class="stop__what">Built a 3D animated e-commerce experience for Aura Coffee, and led a rebrand that redefined visual language, messaging and positioning.</p></div></article>
+				<article class="stop stop--end"><div class="stop__card"><span class="stop__when">Interchange</span><h4 class="stop__co">OneStop</h4><p class="stop__what">Change here for Pavitra and Hatim.</p></div></article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pavitra -->
+	<section class="member" id="pavitra" data-line="p" data-scene="p" data-label="Pavitra" data-color="#EC2F7B">
+		<div class="wrap member__grid">
+			<div class="member__id">
+				<div class="member__head">
+					<div class="portrait">
+					<svg viewBox="0 0 100 100" aria-hidden="true"><g class="dial"><circle cx="50" cy="50" r="49" fill="none" stroke="#EC2F7B" stroke-width="0.8" stroke-dasharray="1 3.2"/><circle cx="99" cy="50" r="2.6" fill="#EC2F7B"/></g></svg>
+					<img src="assets/pavitra.jpg" alt="Portrait of Pavitra Rajpal" width="720" height="720" loading="lazy">
+					<span class="now">NOW ARRIVING</span>
+				</div>
+					<div class="member__who">
+						<div class="badge"><b>P</b><span><em>Line 02</em>Towards OneStop →</span></div>
+						<h3 class="member__name"><span class="nm">PAVITRA</span><small>RAJPAL</small></h3>
+					</div>
+				</div>
+				<p class="member__role">ads, analytics &amp; clients.</p>
+				<p class="member__bio">Works across ad operations and client servicing at JioHotstar, managing advertisers on a self-serve platform and turning campaign data into updates clients can act on. A background in music and performing arts gives Pavitra an instinct for audience and story.</p>
+				<ul class="chips">
+					<li class="cert">Google Ads Search</li><li class="cert">Google Analytics 4</li><li>Looker Studio</li><li>Sheets &amp; Excel</li><li>SEMrush</li><li>Ahrefs</li><li>Keyword Planner</li><li>Metricool</li><li>Canva</li><li>Gemini</li>
+				</ul>
+				<div class="links">
+					<a class="pill" href="https://www.linkedin.com/in/pavitra-rajpal-926125325" target="_blank" rel="noopener">LinkedIn ↗</a>
+					<a class="pill" href="#contact" data-go="contact">Contact</a>
+				</div>
+			</div>
+			<div class="tl">
+				<div class="tl__rail"></div><div class="tl__fill"></div>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2024 – 2025</span><span class="plate plate--dark"><img src="assets/logos/nexus.png" alt="Jai Hind Digital Nexus logo" loading="lazy"></span></div><h4 class="stop__co">Jai Hind Digital Nexus</h4><p class="stop__role">Founding Vice President, Events</p><p class="stop__what">Conceptualised and ran tech and content events with a strong digital innovation focus.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Apr – Jul 2025</span><span class="plate"><img src="assets/logos/iide.png" alt="IIDE logo" loading="lazy"></span></div><h4 class="stop__co">IIDE</h4><p class="stop__role">SEO Intern</p><p class="stop__what">Keyword research and on-page audits in SEMrush, Ahrefs and Keyword Planner, turned into content recommendations for paid and social.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Aug – Nov 2025</span><span class="plate plate--dark"><img src="assets/logos/relkra.png" alt="Relkra Digital logo" loading="lazy"></span></div><h4 class="stop__co">Relkra Digital</h4><p class="stop__role">PR &amp; Social Media Intern</p><p class="stop__what">Led content, design and trend research for client accounts, and coordinated micro-influencer outreach for UGC and shoot campaigns.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">2025</span><span class="plate"><img src="assets/logos/talaash.png" alt="Talaash logo" loading="lazy"></span></div><h4 class="stop__co">Talaash</h4><p class="stop__role">Head of Department, Events</p><p class="stop__what">Planned and ran flagship college events, leading a team across departments, sponsors and vendors.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Mar – Jun 2026</span><span class="plate"><img src="assets/logos/jiohotstar.png" alt="JioHotstar logo" loading="lazy"></span></div><h4 class="stop__co">JioHotstar</h4><p class="stop__role">Ad Operations Associate</p><p class="stop__what">Owned delivery, pacing and troubleshooting for self-serve campaigns through IPL 2026, one of the platform's busiest inventory windows, and turned recurring reports into one reusable template.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Jul 2026 – now</span><span class="plate"><img src="assets/logos/jiohotstar.png" alt="JioHotstar logo" loading="lazy"></span></div><h4 class="stop__co">JioHotstar</h4><p class="stop__role">Client Servicing &amp; Ad Sales</p><p class="stop__what">Manages advertiser relationships, turns performance data into budget, creative and targeting advice, and guides inbound leads from first query to a live campaign.</p></div></article>
+				<article class="stop stop--end"><div class="stop__card"><span class="stop__when">Interchange</span><h4 class="stop__co">OneStop</h4><p class="stop__what">Change here for Muhsin and Hatim.</p></div></article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hatim -->
+	<section class="member" id="hatim" data-line="h" data-scene="h" data-label="Hatim" data-color="#4A76FF">
+		<div class="wrap member__grid">
+			<div class="member__id">
+				<div class="member__head">
+					<div class="portrait">
+					<svg viewBox="0 0 100 100" aria-hidden="true"><g class="dial"><circle cx="50" cy="50" r="49" fill="none" stroke="#4A76FF" stroke-width="0.8" stroke-dasharray="1 3.2"/><circle cx="99" cy="50" r="2.6" fill="#4A76FF"/></g></svg>
+					<img src="assets/hatim.jpg" alt="Portrait of Hatim Sampalwala" width="720" height="720" loading="lazy">
+					<span class="now">NOW ARRIVING</span>
+				</div>
+					<div class="member__who">
+						<div class="badge"><b>H</b><span><em>Line 03</em>Towards OneStop →</span></div>
+						<h3 class="member__name"><span class="nm">HATIM</span><small>SAMPALWALA</small></h3>
+					</div>
+				</div>
+				<p class="member__role">SEO, social &amp; data.</p>
+				<p class="member__bio">Comfortable across the full loop: plan the campaign, optimise it against the data, then report what the numbers mean for the business. Ships web projects on the side, out of curiosity about how the products we market get built.</p>
+				<ul class="chips">
+					<li class="cert">Google Ads Search</li><li class="cert">Claude 101</li><li>Semrush</li><li>Ahrefs</li><li>Screaming Frog</li><li>Keyword Planner</li><li>YouTube Studio</li><li>Sales Navigator</li><li>Apollo.io</li><li>Canva</li>
+				</ul>
+				<div class="links">
+					<a class="pill" href="https://www.linkedin.com/in/hatim-sampalwala-a27a1828a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+					<a class="pill" href="https://hs-2-0-ashy.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a>
+				</div>
+			</div>
+			<div class="tl">
+				<div class="tl__rail"></div><div class="tl__fill"></div>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Sep 2024 – May 2025</span><span class="plate plate--text" role="img" aria-label="Fulus">Fulus</span></div><h4 class="stop__co">Fulus</h4><p class="stop__role">Growth Intern</p><p class="stop__what">Wrote and optimised website content with ChatGPT and Gemini for SEO and AEO, and ran influencer collaborations to reach new audiences.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Apr – Jun 2025</span><span class="plate"><img src="assets/logos/sushil.svg" alt="Sushil Finance logo" loading="lazy"></span></div><h4 class="stop__co">Sushil Finance</h4><p class="stop__role">SEO Intern</p><p class="stop__what">Full-site audits and keyword research for a financial services brand, benchmarked in Semrush, Ahrefs and Screaming Frog, and turned into a prioritised fix list.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Aug 2025 – Jan 2026</span><span class="plate plate--dark"><img src="assets/logos/toykingdom.png" alt="Toy Kingdom logo" loading="lazy"></span></div><h4 class="stop__co">Toy Kingdom</h4><p class="stop__role">E-commerce &amp; Social Media Intern</p><p class="stop__what">Grew the combined Instagram and Facebook audience past 2,500 followers with 3 to 4 trend-led reels and posts a week.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Mar – Jun 2026</span><span class="plate"><img src="assets/logos/django.png" alt="Django Digital logo" loading="lazy"></span></div><h4 class="stop__co">Django</h4><p class="stop__role">Solutions Intern</p><p class="stop__what">Ran social for an IVF healthcare client across 6 accounts on 4 platforms, with monthly dashboards that decided the next month's plan.</p></div></article>
+				<article class="stop"><div class="stop__card"><div class="stop__top"><span class="stop__when">Projects</span><span class="plate plate--green"><img src="assets/logos/zuhoor.svg" alt="Zuhoor Blossoms logo" loading="lazy"></span></div><h4 class="stop__co">Zuhoor Blossoms &amp; Flappy Bird</h4><p class="stop__role">Live storefront · browser game</p><p class="stop__what">Shipped a live skincare storefront end to end, product pages to on-page SEO, and a playable browser game built from scratch.</p></div></article>
+				<article class="stop stop--end"><div class="stop__card"><span class="stop__when">Interchange</span><h4 class="stop__co">OneStop</h4><p class="stop__what">Change here for Muhsin and Pavitra.</p></div></article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================================ SERVICES -->
+	<section class="section board-sec" id="services" data-scene="services" data-label="Services" data-color="#F3ECDF">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="eyebrow">Services</span>
+				<h2 class="h2">Everything digital. <span class="serif mg">One stop.</span></h2>
+				<p class="sub">Every service calls at two or three of us, so there is always a second pair of eyes on your work.</p>
+			</div>
+			<div class="board" id="board">
+				<div class="board__top"><b>DEPARTURES</b><span>Platform 1 · Mumbai</span><span>Services calling today</span></div>
+				<div class="board__head"><span>Service</span><span>Calling at</span><span>Proof on record</span></div>
+				<!-- rows are rendered from data in the script; this is the resting state -->
+				<div id="board-rows"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================================ WORK -->
+	<section class="section" id="work" data-scene="work" data-label="Work" data-color="#F3ECDF">
+		<div class="wrap">
+			<div class="section-head">
+				<span class="eyebrow">Work</span>
+				<h2 class="h2">Case files <span class="serif">from the network.</span></h2>
+			</div>
+			<div class="work-grid">
+				<div class="card card--film" data-tilt>
+					<div class="cover">
+						<video id="film-preview" src="assets/onestop-film.mp4" poster="assets/film-poster.jpg" muted loop playsinline preload="none"></video>
+						<div class="film-shade"></div>
+						<button class="film-play" type="button" data-film data-cursor="PLAY" aria-label="Play the OneStop film with sound"><svg viewBox="0 0 24 24"><path d="M5 3 L21 12 L5 21 Z" fill="currentColor"/></svg></button>
+						<div class="film-label"><b>The OneStop film</b><span>30 s · 60 fps · motion &amp; sound made in-house</span></div>
+					</div>
+				</div>
+				<a class="card" data-tilt href="https://zuhoorwebsite.vercel.app/" target="_blank" rel="noopener" data-cursor="OPEN">
+					<div class="cover" style="background:linear-gradient(140deg,#101a3a,#0c0a09)"><div class="cover__brand"><span class="plate plate--green"><img src="assets/logos/zuhoor.svg" alt="Zuhoor Blossoms logo" loading="lazy"></span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 60 H180 L240 120 H410" stroke="#4A76FF" stroke-width="10" fill="none"/></svg>
+						<span class="cover__big serif" style="font-weight:400;color:#F3ECDF">zuhoor.</span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Web · e-commerce</span><span class="who"><i style="background:var(--cobalt)"></i></span></div><h3>Zuhoor Blossoms</h3><p>A live skincare storefront built end to end: product pages, site structure, copy and on-page SEO.</p><span class="go">Visit the store ↗</span></div>
+				</a>
+				<div class="card" data-tilt>
+					<div class="cover" style="background:linear-gradient(140deg,#3a0b22,#0c0a09)"><div class="cover__brand"><span class="plate"><img src="assets/logos/jiohotstar.png" alt="JioHotstar logo" loading="lazy"></span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 190 H120 L190 120 H410" stroke="#EC2F7B" stroke-width="10" fill="none"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">IPL<span style="color:var(--berry)">’26</span></span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Ad operations</span><span class="who"><i style="background:var(--berry)"></i></span></div><h3>IPL 2026 on JioHotstar</h3><p>Delivery, pacing and troubleshooting for self-serve campaigns through the season's busiest window, with pivot-table analysis of playoff pricing.</p></div>
+				</div>
+				<div class="card" data-tilt>
+					<div class="cover" style="background:linear-gradient(140deg,#3a2a06,#0c0a09)"><div class="cover__brand"><span class="plate"><img src="assets/logos/aura.png" alt="Aura Coffee logo" loading="lazy"></span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 40 H260 L330 110 V260" stroke="#FFB81C" stroke-width="10" fill="none"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">3D<span class="serif" style="font-weight:400;font-size:.45em;color:var(--marigold);margin-left:.15em;letter-spacing:0">coffee</span></span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>3D web · concept</span><span class="who"><i style="background:var(--marigold)"></i></span></div><h3>Aura Coffee</h3><p>A 3D animated e-commerce experience that blends an immersive storefront with the digital strategy behind it.</p></div>
+				</div>
+				<div class="card" data-tilt>
+					<div class="cover" style="background:linear-gradient(140deg,#0e1a44,#0c0a09)"><div class="cover__brand"><span class="plate"><img src="assets/logos/django.png" alt="Django Digital logo" loading="lazy"></span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 90 H90 L150 150 H410" stroke="#4A76FF" stroke-width="10" fill="none"/><path d="M-10 118 H80 L140 178 H410" stroke="#4A76FF" stroke-opacity=".45" stroke-width="10" fill="none"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">6<span style="color:var(--cobalt)">×</span>4</span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Social · dashboards</span><span class="who"><i style="background:var(--marigold)"></i><i style="background:var(--cobalt)"></i></span></div><h3>Django Digital</h3><p>Two of us are Solutions Interns here. Hatim runs social for an IVF clinic across 6 accounts on Instagram, Facebook, YouTube and LinkedIn, reported in monthly dashboards.</p></div>
+				</div>
+				<div class="card" data-tilt>
+					<div class="cover" style="background:linear-gradient(140deg,#2a1230,#0c0a09)"><div class="cover__brand"><span class="plate plate--dark"><img src="assets/logos/nexus.png" alt="Jai Hind Digital Nexus logo" loading="lazy"></span><span class="plate"><img src="assets/logos/rio.svg" alt="Rio logo" loading="lazy"></span><span class="plate plate--text" role="img" aria-label="Mexibay">Mexibay</span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 70 H150 L200 120 H410" stroke="#FFB81C" stroke-width="10" fill="none"/><path d="M-10 170 H150 L200 120" stroke="#EC2F7B" stroke-width="10" fill="none"/><circle cx="200" cy="120" r="18" fill="#0C0A09" stroke="#F3ECDF" stroke-width="7"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">Nexus</span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Events · sponsors</span><span class="who"><i style="background:var(--marigold)"></i><i style="background:var(--berry)"></i></span></div><h3>Jai Hind Digital Nexus</h3><p>The college's flagship tech event. Muhsin led marketing and signed Rio and Mexibay as sponsors; Pavitra was founding VP of events.</p></div>
+				</div>
+				<div class="card" data-tilt>
+					<div class="cover" style="background:linear-gradient(140deg,#35220a,#0c0a09)"><div class="cover__brand"><span class="plate plate--dark"><img src="assets/logos/toykingdom.png" alt="Toy Kingdom logo" loading="lazy"></span></div>
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 60 H200 L260 120 H410" stroke="#FFB81C" stroke-width="10" fill="none"/><path d="M-10 88 H190 L250 148 H410" stroke="#4A76FF" stroke-width="10" fill="none"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">2,500<span style="color:var(--marigold)">+</span></span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Social · e-commerce</span><span class="who"><i style="background:var(--marigold)"></i><i style="background:var(--cobalt)"></i></span></div><h3>Toy Kingdom</h3><p>Two of us ran social for the toy store. Muhsin owned content and design; Hatim grew Instagram and Facebook past 2,500 followers with 3 to 4 reels a week.</p></div>
+				</div>
+				<a class="card" data-tilt href="https://flappy-bird-hs.vercel.app/" target="_blank" rel="noopener" data-cursor="PLAY">
+					<div class="cover" style="background:linear-gradient(140deg,#0b2a33,#0c0a09)">
+						<svg class="cover__lines" viewBox="0 0 400 250" preserveAspectRatio="none" aria-hidden="true"><path d="M300 -10 V70 M300 150 V260" stroke="#4A76FF" stroke-width="34" fill="none"/><path d="M-10 170 Q 90 60 190 130 T 410 90" stroke="#FFB81C" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/></svg>
+						<span class="cover__big" style="color:#F3ECDF">flap.</span>
+					</div>
+					<div class="card__body"><div class="card__meta"><span>Browser game</span><span class="who"><i style="background:var(--cobalt)"></i></span></div><h3>Flappy Bird, rebuilt</h3><p>A playable browser game built from scratch, out of curiosity about how the products we market are made.</p><span class="go">Play it ↗</span></div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================================ CREW -->
+	<section class="section crew" id="crew" data-scene="crew" data-label="Crew" data-color="#FFB81C">
+		<canvas id="petals" aria-hidden="true"></canvas>
+		<div class="wrap crew__grid">
+			<div class="section-head" style="margin:0">
+				<span class="eyebrow" style="color:var(--marigold)">The crew</span>
+				<h2 class="h2">Three lines, <span class="serif mg">one crew.</span></h2>
+				<p class="sub">Same course, same college, same stop: Digital Strategy at Jai Hind College, Mumbai, class of ’27. We have been building things together since the first semester.</p>
+				<div class="crew__college"><span class="plate"><img src="assets/logos/jaihind.png" alt="Jai Hind College logo" loading="lazy"></span><span><b>Jai Hind College</b>Churchgate, Mumbai</span></div>
+				<p class="crew__hint" id="crew-hint">Pick up a photo and move it around.</p>
+			</div>
+			<div class="crew__board" id="crew-board">
+				<figure class="polaroid pol-mirror" style="--r:-5deg"><span class="tape"></span><img src="assets/crew-mirror.jpg" alt="Muhsin, Pavitra and Hatim in a mirror selfie under a marigold garland" width="825" height="1100" loading="lazy"><figcaption>dressed up for once</figcaption></figure>
+				<figure class="polaroid pol-selfie" style="--r:7deg"><span class="tape" style="background:rgba(236,47,123,.7)"></span><img src="assets/crew-selfie.jpg" alt="Selfie of the three with a packet of chips" width="825" height="1100" loading="lazy"><figcaption>strategy meeting, probably.</figcaption></figure>
+				<figure class="polaroid pol-m pol-sq" style="--r:5deg"><img src="assets/muhsin.jpg" alt="Muhsin" width="720" height="720" loading="lazy"><figcaption>muhsin</figcaption></figure>
+				<figure class="polaroid pol-p pol-sq" style="--r:-7deg"><img src="assets/pavitra.jpg" alt="Pavitra" width="720" height="720" loading="lazy"><figcaption>pavitra</figcaption></figure>
+				<figure class="polaroid pol-h pol-sq" style="--r:-3deg"><img src="assets/hatim.jpg" alt="Hatim" width="720" height="720" loading="lazy"><figcaption>hatim</figcaption></figure>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============================================================ MARQUEE -->
+	<section class="marquee" aria-label="Where we have worked">
+		<div class="wrap marquee__label"><span class="eyebrow">Where we've been</span></div>
+		<div class="logo-track" id="logo-track"><span class="plate plate--lg"><img src="assets/logos/jiohotstar.png" alt="JioHotstar logo" loading="lazy"></span><span class="plate plate--dark plate--lg"><img src="assets/logos/toykingdom.png" alt="Toy Kingdom logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/django.png" alt="Django Digital logo" loading="lazy"></span><span class="plate plate--dark plate--lg"><img src="assets/logos/relkra.png" alt="Relkra Digital logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/iide.png" alt="IIDE logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/sushil.svg" alt="Sushil Finance logo" loading="lazy"></span><span class="plate plate--text plate--lg" role="img" aria-label="Fulus">Fulus</span><span class="plate plate--text plate--lg" role="img" aria-label="Amigo Cars">Amigo Cars</span><span class="plate plate--lg"><img src="assets/logos/talaash.png" alt="Talaash logo" loading="lazy"></span><span class="plate plate--dark plate--lg"><img src="assets/logos/nexus.png" alt="Jai Hind Digital Nexus logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/jaihind.png" alt="Jai Hind College logo" loading="lazy"></span><span class="plate plate--green plate--lg"><img src="assets/logos/zuhoor.svg" alt="Zuhoor Blossoms logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/aura.png" alt="Aura Coffee logo" loading="lazy"></span><span class="plate plate--lg"><img src="assets/logos/rio.svg" alt="Rio logo" loading="lazy"></span><span class="plate plate--text plate--lg" role="img" aria-label="Mexibay">Mexibay</span></div>
+		<div class="marquee__track" id="marquee">
+			<span style="--dotc:var(--berry)">JioHotstar</span><span style="--dotc:var(--marigold)">Toy Kingdom</span><span style="--dotc:var(--cobalt)">Django</span><span style="--dotc:var(--cobalt)">Fulus</span><span style="--dotc:var(--berry)">Relkra Digital</span><span style="--dotc:var(--berry)">IIDE</span><span style="--dotc:var(--cobalt)">Sushil Finance</span><span style="--dotc:var(--marigold)">Amigo Cars</span><span style="--dotc:var(--marigold)">Talaash</span><span style="--dotc:var(--berry)">Digital Nexus</span><span style="--dotc:var(--cobalt)">Zuhoor Blossoms</span>
+		</div>
+	</section>
+
+	<!-- ============================================================ CONTACT -->
+	<section class="section contact" id="contact" data-scene="contact" data-label="Contact" data-color="#FFB81C">
+		<div class="wrap">
+			<span class="eyebrow">Final stop</span>
+			<h2 class="contact__title" style="margin-top:22px">Next stop:<span class="serif mg">your brand.</span></h2>
+			<p class="sub" style="margin-top:28px">Tell us what you're launching and which stop you need first. Write to any of us; it reaches all three.</p>
+			<div class="contact__cards">
+				<div class="pcard" data-line="m">
+					<div class="pcard__who"><img src="assets/muhsin.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Muhsin Gigani</b><span>brand, content &amp; build</span></div></div>
+					<div class="mail"><code id="mail-m">mdmuhsingigani9@gmail.com</code><button class="copy" type="button" data-copy="mail-m">Copy</button></div>
+					<div class="links"><a class="pill" href="https://muhsin-portfolio-ten.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+				</div>
+				<div class="pcard" data-line="p">
+					<div class="pcard__who"><img src="assets/pavitra.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Pavitra Rajpal</b><span>ads, analytics &amp; clients</span></div></div>
+					<div class="mail"><code id="mail-p">pavitrarajpal@gmail.com</code><button class="copy" type="button" data-copy="mail-p">Copy</button></div>
+					<div class="links"><a class="pill" href="https://www.linkedin.com/in/pavitra-rajpal-926125325" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+				</div>
+				<div class="pcard" data-line="h">
+					<div class="pcard__who"><img src="assets/hatim.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Hatim Sampalwala</b><span>SEO, social &amp; data</span></div></div>
+					<div class="mail"><code id="mail-h">hsampalwala@gmail.com</code><button class="copy" type="button" data-copy="mail-h">Copy</button></div>
+					<div class="links"><a class="pill" href="https://www.linkedin.com/in/hatim-sampalwala-a27a1828a/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="pill" href="https://hs-2-0-ashy.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer wrap">
+		<span>OneStop · Mumbai · 2026</span>
+		<span>Three lines. One stop.</span>
+		<a href="#top" data-go="top" style="text-decoration:none">Back to the start ↑</a>
+	</footer>
+</main>
+
+<nav class="journey is-away" id="journey" aria-label="Page stops">
+	<div class="journey__track" id="journey-track">
+		<div class="journey__base"></div><div class="journey__fill" id="journey-fill"></div>
+	</div>
+	<span class="journey__now" id="journey-now">Board</span>
+</nav>
+
+<div class="modal" id="modal" hidden>
+	<button class="pill modal__close" type="button" id="modal-close">Close ✕</button>
+	<video id="film" src="assets/onestop-film.mp4" poster="assets/film-poster.jpg" controls playsinline preload="none"></video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/SplitText.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/InertiaPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<!-- APP -->
+<!-- SCENE -->

@@ -1,0 +1,14 @@
+# dependencies (run `npm install` in onestop/)
+node_modules/
+
+# Remotion render scratch: keep only the finished film
+onestop/out/*
+!onestop/out/OneStop_final.mp4
+
+# logo research scratch; includes images pulled from private PDFs
+onestop-site/logo-work/
+
+# local tooling
+.claude/
+__pycache__/
+*.log

@@ -1,0 +1,24 @@
+{
+  "name": "onestop-motion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render OneStop out/OneStop.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.469",
+    "@remotion/google-fonts": "4.0.469",
+    "@remotion/media": "4.0.469",
+    "@remotion/paths": "4.0.469",
+    "@remotion/motion-blur": "4.0.469",
+    "@remotion/noise": "4.0.469",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.469"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}
