@@ -41,23 +41,13 @@
 	];
 	const WIDTH = 17;
 	const rows = $('#board-rows');
-	const flapCells = [];
-	SERVICES.forEach(([name, calls, proof, desc, logo], r) => {
+	const signs = [];
+	SERVICES.forEach(([name, calls, proof, desc, logo]) => {
 		const row = document.createElement('div');
 		row.className = 'board__row';
 		row.setAttribute('role', 'row');
 		const flaps = document.createElement('div');
 		flaps.className = 'flaps';
-		flaps.setAttribute('aria-label', name);
-		const padded = name.padEnd(WIDTH, ' ');
-		[...padded].forEach((ch, i) => {
-			const s = document.createElement('span');
-			s.className = 'flap';
-			s.setAttribute('aria-hidden', 'true');
-			s.textContent = ch;
-			flaps.appendChild(s);
-			flapCells.push({el: s, target: ch, row: r, col: i});
-		});
 		const who = document.createElement('div');
 		who.className = 'calls';
 		who.innerHTML = ['m', 'p', 'h']
@@ -69,37 +59,10 @@
 		pr.innerHTML = `<span class="proof__line">${plate}<span>${proof}</span></span><small>${desc}</small>`;
 		row.append(flaps, who, pr);
 		rows.appendChild(row);
+		signs.push({sign: Bits.splitFlap(flaps, {text: name, width: WIDTH}), name});
 	});
-	const FLAP_SET = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ&-0123456789';
-	function runBoard() {
-		if (reduce) return;
-		const t0 = performance.now();
-		const plan = flapCells.map((c) => ({
-			...c,
-			start: c.row * 90 + c.col * 22,
-			steps: 6 + Math.floor(Math.random() * 12),
-			seed: Math.floor(Math.random() * FLAP_SET.length),
-			last: c.target,
-		}));
-		const frame = (now) => {
-			let busy = false;
-			for (const c of plan) {
-				const k = Math.floor((now - t0 - c.start) / 55);
-				let ch;
-				if (k < 0) ch = ' ';
-				else if (k < c.steps) ch = FLAP_SET[(c.seed + k) % FLAP_SET.length];
-				else ch = c.target;
-				if (k < c.steps) busy = true;
-				if (ch !== c.last) {
-					c.el.textContent = ch;
-					c.last = ch;
-					c.el.animate([{transform: 'scaleY(1)'}, {transform: 'scaleY(0.2)', filter: 'brightness(1.8)'}, {transform: 'scaleY(1)'}], {duration: 70});
-				}
-			}
-			if (busy) requestAnimationFrame(frame);
-		};
-		requestAnimationFrame(frame);
-	}
+	/* departures roll in row by row, each from a blank board */
+	const runBoard = () => signs.forEach(({sign, name}, r) => sign.to(name, {from: '', delay: r * 120}));
 
 	/* ---------------------------------------------------------- tool icons on chips (Simple Icons, CC0) */
 	const ICONS = {
@@ -242,6 +205,23 @@
 		}),
 	);
 
+	/* ---------------------------------------------------------- React Bits ports */
+	const menu = Bits.staggeredMenu({
+		toggle: $('#menu-toggle'),
+		wrap: $('#menu'),
+		panel: $('#menu-panel'),
+		onOpen: () => lenis?.stop(),
+		onClose: () => lenis?.start(),
+		onGo: go,
+	});
+	Bits.clickSpark();
+	Bits.circularText($('#film-ring'), 'PLAY THE FILM \u2022 30 SECONDS \u2022 WITH SOUND \u2022 ', {hoverTarget: $('.card--film')});
+	$$('.pc-wrap').forEach((w) => Bits.profileCard(w));
+	Bits.splitFlap($('#dest-sign'), {text: 'YOUR BRAND', width: 11, flipMs: 80, staggerMs: 40}).cycle(
+		['YOUR BRAND', 'YOUR LAUNCH', 'YOUR STORE', 'YOUR REELS', 'YOUR EVENT', 'YOUR ADS'],
+		2400,
+	);
+
 	/* nav: hide on the way down, return on the way up */
 	const nav = $('#nav');
 	let lastY = 0;
@@ -250,7 +230,7 @@
 		end: 'max',
 		onUpdate(self) {
 			const y = self.scroll();
-			nav.classList.toggle('is-hidden', y > lastY && y > 500 && modal.hidden);
+			nav.classList.toggle('is-hidden', y > lastY && y > 500 && modal.hidden && !menu.open);
 			nav.classList.toggle('is-solid', y > 60);
 			lastY = y;
 		},
@@ -311,17 +291,10 @@
 		gsap.fromTo(m.words, {opacity: 0.16}, {opacity: 1, ease: 'none', stagger: 0.08, scrollTrigger: {trigger: '#manifesto', start: 'top 78%', end: 'bottom 50%', scrub: true}});
 	}
 
-	/* stats count up */
+	/* stats roll in like an odometer */
 	$$('[data-count]').forEach((el) => {
-		const end = +el.dataset.count;
-		const suf = el.dataset.suffix || '';
-		const o = {v: 0};
-		ScrollTrigger.create({
-			trigger: el,
-			start: 'top 88%',
-			once: true,
-			onEnter: () => !reduce && gsap.fromTo(o, {v: 0}, {v: end, duration: 1.8, ease: 'power3.out', onUpdate: () => (el.textContent = Math.round(o.v).toLocaleString('en-IN') + suf)}),
-		});
+		const odo = Bits.counter(el, +el.dataset.count, {suffix: el.dataset.suffix || ''});
+		ScrollTrigger.create({trigger: el, start: 'top 88%', once: true, onEnter: () => odo.roll()});
 	});
 
 	/* ---------------------------------------------------------- member lines */

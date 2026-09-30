@@ -20,6 +20,7 @@ python -m http.server 5173 --directory dist
 Then open http://localhost:5173.
 
 - Edit the sources in `onestop-site/src/` (`page.html`, `style.css`, `app.js`, `scene.js`), then run `python build.py`.
+- `bits.js` / `bits.css` hold the React Bits components ported to plain JS (StaggeredMenu, SplitFlapText, ProfileCard, Counter, CircularText, StarBorder, ClickSpark), credited to reactbits.dev.
 - `onestop-site/dist/` is a complete static site. Drag it into Vercel (or any static host) to put it online.
 - `onestop-site/site/index.html` is the version published as the claude.ai artifact.
 - Logos are in `onestop-site/assets/logos/`. Amigo Cars, Mexibay and Fulus still show text badges; drop their logo files in and swap the badges in `page.html`.

@@ -12,3 +12,9 @@ onestop-site/logo-work/
 .claude/
 __pycache__/
 *.log
+
+# vercel project link (local)
+.vercel/
+
+.vercel
+.env*

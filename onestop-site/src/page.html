@@ -28,9 +28,45 @@
 			<li><a href="#work" data-go="work">Work</a></li>
 			<li><a href="#crew" data-go="crew">Crew</a></li>
 		</ul>
-		<a class="pill pill--solid nav__cta" href="#contact" data-go="contact"><span class="dot"></span><span class="lg">Next stop: you</span><span class="sm">Contact</span></a>
+		<div class="nav__right">
+			<a class="pill pill--solid nav__cta" href="#contact" data-go="contact"><span class="dot"></span><span class="lg">Next stop: you</span><span class="sm">Contact</span></a>
+			<button class="sm-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu-panel"><span class="sm-toggle-textWrap" aria-hidden="true"><span class="sm-toggle-textInner"><span class="sm-toggle-line">Menu</span></span></span><span class="sm-icon" aria-hidden="true"><span class="sm-icon-line"></span><span class="sm-icon-line sm-icon-line-v"></span></span></button>
+		</div>
 	</div>
 </header>
+
+<div class="sm-wrap" id="menu" data-open="false">
+	<div class="sm-prelayers" aria-hidden="true">
+		<div class="sm-prelayer" style="background:var(--marigold)"></div>
+		<div class="sm-prelayer" style="background:var(--berry)"></div>
+		<div class="sm-prelayer" style="background:var(--cobalt)"></div>
+	</div>
+	<aside class="sm-panel" id="menu-panel" aria-hidden="true" aria-label="Stations">
+		<div class="sm-panel-inner">
+			<p class="sm-panel-title">Stations on this line</p>
+			<ul class="sm-panel-list" role="list">
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#top" data-menu-go="top"><span class="sm-panel-itemLabel">Board</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#why" data-menu-go="why"><span class="sm-panel-itemLabel">Why</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#muhsin" data-menu-go="muhsin"><i style="background:var(--marigold)"></i><span class="sm-panel-itemLabel">Muhsin</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#pavitra" data-menu-go="pavitra"><i style="background:var(--berry)"></i><span class="sm-panel-itemLabel">Pavitra</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#hatim" data-menu-go="hatim"><i style="background:var(--cobalt)"></i><span class="sm-panel-itemLabel">Hatim</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#services" data-menu-go="services"><span class="sm-panel-itemLabel">Services</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#work" data-menu-go="work"><span class="sm-panel-itemLabel">Work</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#crew" data-menu-go="crew"><span class="sm-panel-itemLabel">Crew</span></a></li>
+				<li class="sm-panel-itemWrap"><a class="sm-panel-item" href="#contact" data-menu-go="contact"><span class="sm-panel-itemLabel">Contact</span></a></li>
+			</ul>
+			<div class="sm-socials">
+				<h3 class="sm-socials-title">Elsewhere</h3>
+				<ul class="sm-socials-list" role="list">
+					<li><a class="sm-socials-link" href="https://muhsin-portfolio-ten.vercel.app/" target="_blank" rel="noopener">Muhsin · portfolio</a></li>
+					<li><a class="sm-socials-link" href="https://www.linkedin.com/in/pavitra-rajpal-926125325" target="_blank" rel="noopener">Pavitra · LinkedIn</a></li>
+					<li><a class="sm-socials-link" href="https://www.linkedin.com/in/hatim-sampalwala-a27a1828a/" target="_blank" rel="noopener">Hatim · LinkedIn</a></li>
+					<li><a class="sm-socials-link" href="https://hs-2-0-ashy.vercel.app/" target="_blank" rel="noopener">Hatim · portfolio</a></li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+</div>
 
 <main>
 	<!-- ============================================================ HERO -->
@@ -49,7 +85,7 @@
 				<p class="hero__lede"><strong>Muhsin, Pavitra and Hatim</strong> are a digital strategy crew from Mumbai. Ads, SEO, social, content, web and events, all run from one platform.</p>
 				<div class="hero__ctas">
 					<a class="pill pill--solid" href="#lines" data-go="lines"><span class="dot"></span>Meet the lines</a>
-					<button class="pill" type="button" data-film data-cursor="PLAY">Play the film · 0:30</button>
+					<span class="star-border"><span class="sb-bottom"></span><span class="sb-top"></span><button class="pill" type="button" data-film data-cursor="PLAY">Play the film · 0:30</button></span>
 				</div>
 			</div>
 			<nav class="legend" aria-label="The three lines">
@@ -226,7 +262,7 @@
 					<div class="cover">
 						<video id="film-preview" src="assets/onestop-film.mp4" poster="assets/film-poster.jpg" muted loop playsinline preload="none"></video>
 						<div class="film-shade"></div>
-						<button class="film-play" type="button" data-film data-cursor="PLAY" aria-label="Play the OneStop film with sound"><svg viewBox="0 0 24 24"><path d="M5 3 L21 12 L5 21 Z" fill="currentColor"/></svg></button>
+						<div class="ctext" id="film-ring"></div><button class="film-play" type="button" data-film data-cursor="PLAY" aria-label="Play the OneStop film with sound"><svg viewBox="0 0 24 24"><path d="M5 3 L21 12 L5 21 Z" fill="currentColor"/></svg></button>
 						<div class="film-label"><b>The OneStop film</b><span>30 s · 60 fps · motion &amp; sound made in-house</span></div>
 					</div>
 				</div>
@@ -317,23 +353,57 @@
 	<section class="section contact" id="contact" data-scene="contact" data-label="Contact" data-color="#FFB81C">
 		<div class="wrap">
 			<span class="eyebrow">Final stop</span>
-			<h2 class="contact__title" style="margin-top:22px">Next stop:<span class="serif mg">your brand.</span></h2>
+			<h2 class="contact__title" style="margin-top:22px">Next stop:</h2>
+			<div class="dest"><span class="dest__label">Destination</span><div class="dest__sign" id="dest-sign">YOUR BRAND</div></div>
 			<p class="sub" style="margin-top:28px">Tell us what you're launching and which stop you need first. Write to any of us; it reaches all three.</p>
-			<div class="contact__cards">
-				<div class="pcard" data-line="m">
-					<div class="pcard__who"><img src="assets/muhsin.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Muhsin Gigani</b><span>brand, content &amp; build</span></div></div>
-					<div class="mail"><code id="mail-m">mdmuhsingigani9@gmail.com</code><button class="copy" type="button" data-copy="mail-m">Copy</button></div>
-					<div class="links"><a class="pill" href="https://muhsin-portfolio-ten.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+			<div class="passes">
+				<div class="pc-wrap" data-line="m">
+					<div class="pc-behind"></div>
+					<div class="pc-shell">
+						<article class="pc-card">
+							<div class="pc-photo"><img src="assets/muhsin.jpg" alt="Portrait of Muhsin Gigani" width="720" height="720" loading="lazy"></div>
+							<div class="pc-shine"></div>
+							<div class="pc-glare"></div>
+							<div class="pc-top"><b>M</b><span>OneStop pass · Line 01</span></div>
+							<div class="pc-details"><h3>Muhsin Gigani</h3><p>brand, content &amp; build</p></div>
+							<div class="pc-info">
+								<div class="mail"><code id="mail-m">mdmuhsingigani9@gmail.com</code><button class="copy" type="button" data-copy="mail-m">Copy</button></div>
+								<div class="links"><a class="pill" href="https://muhsin-portfolio-ten.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+							</div>
+						</article>
+					</div>
 				</div>
-				<div class="pcard" data-line="p">
-					<div class="pcard__who"><img src="assets/pavitra.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Pavitra Rajpal</b><span>ads, analytics &amp; clients</span></div></div>
-					<div class="mail"><code id="mail-p">pavitrarajpal@gmail.com</code><button class="copy" type="button" data-copy="mail-p">Copy</button></div>
-					<div class="links"><a class="pill" href="https://www.linkedin.com/in/pavitra-rajpal-926125325" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+				<div class="pc-wrap" data-line="p">
+					<div class="pc-behind"></div>
+					<div class="pc-shell">
+						<article class="pc-card">
+							<div class="pc-photo"><img src="assets/pavitra.jpg" alt="Portrait of Pavitra Rajpal" width="720" height="720" loading="lazy"></div>
+							<div class="pc-shine"></div>
+							<div class="pc-glare"></div>
+							<div class="pc-top"><b>P</b><span>OneStop pass · Line 02</span></div>
+							<div class="pc-details"><h3>Pavitra Rajpal</h3><p>ads, analytics &amp; clients</p></div>
+							<div class="pc-info">
+								<div class="mail"><code id="mail-p">pavitrarajpal@gmail.com</code><button class="copy" type="button" data-copy="mail-p">Copy</button></div>
+								<div class="links"><a class="pill" href="https://www.linkedin.com/in/pavitra-rajpal-926125325" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+							</div>
+						</article>
+					</div>
 				</div>
-				<div class="pcard" data-line="h">
-					<div class="pcard__who"><img src="assets/hatim.jpg" alt="" width="58" height="58" loading="lazy"><div><b>Hatim Sampalwala</b><span>SEO, social &amp; data</span></div></div>
-					<div class="mail"><code id="mail-h">hsampalwala@gmail.com</code><button class="copy" type="button" data-copy="mail-h">Copy</button></div>
-					<div class="links"><a class="pill" href="https://www.linkedin.com/in/hatim-sampalwala-a27a1828a/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="pill" href="https://hs-2-0-ashy.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+				<div class="pc-wrap" data-line="h">
+					<div class="pc-behind"></div>
+					<div class="pc-shell">
+						<article class="pc-card">
+							<div class="pc-photo"><img src="assets/hatim.jpg" alt="Portrait of Hatim Sampalwala" width="720" height="720" loading="lazy"></div>
+							<div class="pc-shine"></div>
+							<div class="pc-glare"></div>
+							<div class="pc-top"><b>H</b><span>OneStop pass · Line 03</span></div>
+							<div class="pc-details"><h3>Hatim Sampalwala</h3><p>SEO, social &amp; data</p></div>
+							<div class="pc-info">
+								<div class="mail"><code id="mail-h">hsampalwala@gmail.com</code><button class="copy" type="button" data-copy="mail-h">Copy</button></div>
+								<div class="links"><a class="pill" href="https://www.linkedin.com/in/hatim-sampalwala-a27a1828a/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="pill" href="https://hs-2-0-ashy.vercel.app/" target="_blank" rel="noopener">Portfolio ↗</a></div>
+							</div>
+						</article>
+					</div>
 				</div>
 			</div>
 		</div>

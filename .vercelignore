@@ -1,0 +1,7 @@
+# Upload only the built site. Everything else (the film project, sources,
+# logo research scratch) stays local.
+/*
+!/vercel.json
+!/onestop-site
+/onestop-site/*
+!/onestop-site/dist

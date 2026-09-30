@@ -9,8 +9,8 @@ root = Path(__file__).resolve().parent
 src = root / "src"
 read = lambda n: (src / n).read_text(encoding="utf-8")
 page = (read("page.html")
-        .replace("<!-- STYLE -->", "<style>\n" + read("style.css") + "\n</style>")
-        .replace("<!-- APP -->", "<script>\n" + read("app.js") + "\n</script>")
+        .replace("<!-- STYLE -->", "<style>\n" + read("style.css") + read("bits.css") + "\n</style>")
+        .replace("<!-- APP -->", "<script>\n" + read("bits.js") + "\n</script>\n<script>\n" + read("app.js") + "\n</script>")
         .replace("<!-- SCENE -->", '<script type="module">\n' + read("scene.js") + "\n</script>"))
 
 (root / "site").mkdir(exist_ok=True)
